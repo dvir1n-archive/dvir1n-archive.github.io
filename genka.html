@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гена</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      cursor: default; /* стандартный курсор */
+    }
+
+    img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+  </style>
+</head>
+<body>
+  <img src="genka.png" alt="Генка">
+
+  <audio id="bgm" src="8L17YDIBlwJMQID1xogH+vgSihl0E5FA.wav" autoplay loop></audio>
+
+  <script>
+    const audio = document.getElementById('bgm');
+
+    document.body.addEventListener('click', async () => {
+      try {
+        await audio.play();
+
+        if (document.documentElement.requestFullscreen) {
+          await document.documentElement.requestFullscreen();
+        } else if (document.documentElement.webkitRequestFullscreen) {
+          await document.documentElement.webkitRequestFullscreen();
+        } else if (document.documentElement.msRequestFullscreen) {
+          await document.documentElement.msRequestFullscreen();
+        }
+
+      } catch (err) {
+        console.error('Ошибка при переходе в fullscreen:', err);
+      }
+    });
+  </script>
+</body>
+</html>
